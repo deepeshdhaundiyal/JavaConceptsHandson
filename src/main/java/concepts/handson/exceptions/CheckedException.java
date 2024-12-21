@@ -22,6 +22,7 @@ public class CheckedException {
         catch (Exception e)
         {
             System.out.println("Exception occured at --class name -- " + e);
+            //we can use logger classes for further
         }
     }
 
