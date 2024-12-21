@@ -3,7 +3,11 @@ Java exceptional handling encompasses various types:
 - Checked Exceptions: Must be declared or handled (e.g., IOException, SQLException).
 - Unchecked Exceptions: Subclasses of RuntimeException, not mandated to be caught or declared (e.g., NullPointerException, ArithmeticException).
 - Multiple Catch Blocks: Handle different exception types in distinct catch blocks.
-- Try-Catch-Finally: The finally block always executes, beneficial for cleanup operations.
+- Try-Catch-Finally: The final block always executes, beneficial for cleanup operations.
 - Throwing Exceptions: Explicitly throw exceptions using the throw keyword.
 - Custom Exceptions: Develop custom exception classes to denote application-specific errors.
 - Try-With-Resources: Automatically closes resources to prevent resource leaks.
+
+Tips : to memorise easily
+checked exception == compile time exception (c=c)
+un-checked exception == Run time exception (un=un)
