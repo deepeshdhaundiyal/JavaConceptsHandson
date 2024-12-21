@@ -1,0 +1,23 @@
+Abstract classes and Interfaces are used to define the structure of classes and
+to specify methods that need to be implemented by subclasses
+
+----------------------------Abstract Class------------------------------------
+
+Abstract Class: An abstract class is used to provide a common base for related classes.
+It can have both fully implemented methods (concrete methods) and abstract methods (methods without implementation).
+-Can have constructors
+-abstract class can have any access modifiers (public, protected, private to methods only)
+-Can have instance variables with any access modifier and can initialize them.
+-A class can extend only one abstract class (single inheritance).
+
+----------------------------Interface------------------------------------------
+
+Interface: An interface is used to define a contract that other classes must adhere to.
+From Java 8 onwards, interfaces can have default and static methods with implementation.
+-Before Java 8: All methods were abstract (no implementation)
+-cannot be instantiated, so it does not require constructors.
+-Interface are implicitly public. You cannot use any other access modifiers.
+-an only have static final fields (constants), which must be initialized when declared.
+-A class can implement multiple interfaces (multiple inheritance).
+
+
