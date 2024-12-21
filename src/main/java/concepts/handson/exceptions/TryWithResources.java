@@ -5,11 +5,11 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class TryWithoutResources
+public class TryWithResources
 {
     public static void main(String[] args) {
 
-        //using try out with resources to make sure that BufferedReader is automatically closed when the try block finishes
+        //using try-with-resources to make sure that BufferedReader is automatically closed when the try block finishes
         try(BufferedReader br = new BufferedReader(new FileReader("file.txt"))){
             String line = br.readLine();
             System.out.println(line);
