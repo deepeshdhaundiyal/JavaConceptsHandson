@@ -12,6 +12,7 @@ public class CustomExceptionExample
         }
     }
 
+    //method to check valid age and throw exception
     private static void checkAgeMethod(int age) throws InvalidAgeException {
         if(age < 18){
             throw new InvalidAgeException("Please enter a valid age");
