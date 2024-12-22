@@ -1,0 +1,5 @@
+Important Points:-
+public members can be accessed from anywhere. (Scope = Global Level)
+private members are restricted to the class they are declared in. (Scope = Class Level)
+protected members are accessible within the same package or from subclasses in other packages. (Scope = same packages or subclasses of other package)
+Default (no access modifier) members are accessible only within the same package. (Scope = Same package)
