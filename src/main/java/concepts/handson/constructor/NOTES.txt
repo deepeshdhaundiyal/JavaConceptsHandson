@@ -1,0 +1,33 @@
+This vs Super?? Cope constructor??
+We all know about constructor that they have same name as class name, No return type.
+Java differentiates constructors based on the number and types of parameters.
+They are invoked automatically when an object is created.
+
+Do you know constructor Cannot be Static, Final, or Abstract. Do you know about the Copy Constructor?
+Do you know we can create a constructor private to restrict the object creation. (Singleton pattern)
+
+Types of constructors :-
+
+Default constructor : A constructor that we do not need to create and called out when an object is created.
+Parametrised Constructor : A constructor that required parameters to pass on while initialising an object.
+Copy Constructor : Initialises an object using another object of the same class.
+
+ //Parametrised Constructor : A constructor that required parameters to pass on while initialising an object.
+    ConstructorConcepts(int x, String value){
+        System.out.println("Parameterised constructor is called...");
+        this.x = x;
+        this.name = value;
+    }
+
+ //Copy Constructor : Initializes an object using another object of the same class.
+    ConstructorConcepts(ConstructorConcepts constructorConcepts){
+        System.out.println("Copy constructor is called...");
+        this.x = constructorConcepts.x;
+        this.name = constructorConcepts.name;
+    }
+----------------------------------------This vs Super---------------------------------------
+Constructor Chaining
+Within the Same Class: Use this() to call another constructor.
+From Parent Class: Use super() to call a parent class constructor.
+
+for more details check out the code at 'concepts.handson.constructor.ThisVSsuper'
