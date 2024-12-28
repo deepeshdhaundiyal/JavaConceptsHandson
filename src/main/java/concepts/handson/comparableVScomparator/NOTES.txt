@@ -1,0 +1,24 @@
+Comparator Interface needs to implement the logic for compare(Object o1, Object o2) method.
+
+//demonstrating comparator usage with Lambda expression help :
+        Comparator<Student> studentComparator = ((o1, o2) -> (o1.rollNo > o2.rollNo) ? 1 : -1);
+
+        Here my Student class contains name and roll no of the student only!
+        Note : We need to write toString method in Student class else it will print the object address.
+Points to be remembered:-
+External class implements it (can be multiple comparators)
+Multiple sorting methods for different criteria
+Useful when multiple sorting orders are needed or when the class can't implement Comparable
+
+-------------------------------
+Comparable Interface if we implements then we need to override the compareTo(Object that) method.
+
+//when we override the compareTo() method then we need to implement the logic for comparison.
+        public int compareTo(Employee that) {
+                return (this.age > that.age) ? 1 : -1 ; //comparing ages of employees
+            }
+Points to be remembered:-
+class that implements Comparable can be sorted using methods like Collections.sort() or Arrays.sort()
+The class itself implements it
+One sorting method per class
+Useful when only one sorting order is needed
