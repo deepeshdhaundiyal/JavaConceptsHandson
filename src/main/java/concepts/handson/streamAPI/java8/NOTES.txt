@@ -1,0 +1,68 @@
+Collection Framework : The basic understanding we get from collection is store the DATA into format of primitive dataTypes,
+But it's not only limited to primitive data types as some times we need to store using the help of WRAPPER CLASSES or
+else as we have seen earlier, we need to store data in the form of objects (example Employee, Student or else classes) depending on the business need.
+
+But to PROCESS the data based on CHANGING the values, FILTERING out the values or REDUCING the values,
+we prefer to USE STREAM APIs. (To perform the operation over the data that can be easily accessible.)
+
+If we explore the Stream API so, we will notice that it is basically an interface.
+Syntax : Suppose we have List of collection of Integers as below...
+//List<Integer> collectionExample = Arrays.asList (434,23,234,45,34,45,345,452,32);  //An example of storing streamData using COLLECTION
+1) Stream <objectType> streamData = collectionExample.stream();   //method to collect the data in STREAM object (streamData)
+
+2) streamData.forEach (n -> sout(data) //performing operations over the given data (collectionExample)
+
+**WHY WE ARE USING STREAM?**
+To avoid the collection-data changes and the action that might affect the real DATA, We prefer to perform action over the stream-data (streamData).
+
+
+***************************************************************************
+Method to remember in Stream APIs...
+
+streamData.count();    --->  count the number of data presence //like list.size();
+streamData.findFirst(); --> Method that count the first occurrence of the data value.
+collectionExample.sorted(); //this method will sort the data
+------------------------------------------------------------------------------------------
+collectionExample.stream().filter(); //this will filter out the result based on the conditions
+For Example : List<Integer> collectionExample = Arrays.asList (434,23,234,45,34,45,345,452,32);
+collectionExample.stream().filter(n -> n%2 == 1); //logic to check if number is ODD (since odd numbers leave a remainder of 1 when divided by 2).
+------------------------------------------------------------------------------------------
+streamData.map(n -> n*2);   //map method will perform the action over the data 'n' based on the condition like n*2;   //map method also returns a new STREAM
+
+For EXAMPLE : List<Integer> collectionExample = Arrays.asList (434,23,234,45,34,45,345,452,32);
+Stream<Integer> mappedStreamData = collectionExample.map(n -> n*2);  //ln:3 || This will basically double the values and map the results to new Stream object mappedStreamData.
+mappedStreamData.forEach(n -> sout(n));    //ln:4 || To print the streamData values after performing mappedstreamData operations.
+
+//BUILDER PATTERN OPERATION : To perform the above action (ln 3-4) in a single line...
+        collectionExample.stream()               //using STREAM method (stream();) to traverse the data. (collectionExample)
+                      .map(n -> n*2)    // performing the operation over the data values 'n' of collection (collectionExample)
+                      .forEach(n -> sout(n));    //Printing the values of the data after performing above operation (n*2) over the data 'n' of collection (collectionExample).
+
+------------------------------------------------------------------------------------------
+data.sorted();       SORTING THE DATA USING STREAM APIs. //this will return a new STREAM
+For EXAMPLE : List<Integer> collectionExample = Arrays.asList (434,23,234,45,34,45,345,452,32);
+Stream<Integer> data = collectionExample.Stream();
+Stream<Integer> sortedData = data.sorted(); //**I need to store this data into NEW STREAM reference sortedData(Object)**
+sortedData.forEach(n -> sout(n));           //To print the sorted values from List collectionExample
+//Instead of sortedData if we perform this operation over data we will get an ERROR : STREAM has already consumed.
+------------------------------------------------------------------------------------------
+
+
+POINTS TO BE REMEMBER :-
+1) SINGLE-USE ONLY: we can only USE STREAM at ONCE to avoid the data leakage or un-used resource open.
+   A Stream in Java can be consumed only once. Once a Stream operation (like forEach, map, or sorted) is executed, the Stream becomes closed,
+   and attempting to use it again will throw an error. Always create a new Stream for subsequent operations.
+
+2) IMPORTANT : A STREAM API function is basically depends on 3-MAJOR Parts (1. Predicates(SOURCE), 2. Intermediates Operations, 3. Terminal Operations)
+   SOURCE: Data source such as a Collection, Array, or IO channel.
+   INTERMEDIATE Operations: Transformations like filter(), map(), or sorted() that process data but return another Stream.
+   TERMINAL Operations: Operations like forEach(), count(), or collect() that produce a result or perform an action and close the Stream.
+
+3) IMMUTABLE Processing: Streams do not modify the original data source. Instead, they work on a new sequence of data, ensuring that the original data remains unchanged.
+
+4) ORDER Preservation:Streams preserve the order of elements as provided by the source (e.g., Lists or other collections).
+   For unordered sources, operations can be unordered for better performance by calling unordered().
+
+5) TERMINAL Operations is MANDATORY: Intermediate operations alone will not execute until a terminal operation is invoked. Without a terminal operation, the pipeline remains inactive.
+
+6) MEMORY EFFICIENT : Streams are designed for efficient resource management, allowing for bulk operations on data while minimizing memory overhead.
