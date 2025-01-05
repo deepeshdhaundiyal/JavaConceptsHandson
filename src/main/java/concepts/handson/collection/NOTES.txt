@@ -1,0 +1,28 @@
+Collection Interface: The root interface in the Java collection hierarchy.
+List Interface: A collection that allows elements to be inserted in a specific order and allows duplicate elements.
+Set Interface: A collection that does not allow duplicates.
+Queue Interface: A collection designed for holding elements prior to processing.
+Map Interface: A collection that maps keys to values, where each key is unique.
+
+The List interface is a subtype of the Collection interface.
+It defines an ordered collection that can contain duplicate elements.
+The List interface allows elements to be inserted at a specific index,
+and it supports indexed access to elements.
+
+Key characteristics of List:
+Ordered: Elements are ordered, and their positions are preserved.
+Allow Duplicates: Lists can contain duplicate elements.
+Indexed Access: Lists allow random access to elements based on their index.
+
+The List interface extends Collection and provides several methods:
+
+add(E e): Adds an element 'e' to the list.
+add(int index, E element): Inserts an element at the specified position.
+get(int index): Retrieves an element at a specified index.
+remove(int index): Removes the element at the specified index.
+remove(Object o): Removes the first occurrence of the specified element.
+set(int index, E element): Replaces the element at the specified index.
+indexOf(Object o): Returns the index of the first occurrence of the element.
+size(): Returns the number of elements in the list.
+contains(Object o): Checks if the list contains the specified element.
+clear(): Removes all elements from the list.

@@ -1,0 +1,21 @@
+Operator's Types in Java :-
+
+1) Arithmetics operators
+We all are aware with Arithmetics operators + - / * % to perform maths operations.
+Note:- % (modulus) operator is used to get the remainder when one number is divided by another.
+
+2) Relational Operators
+These operators used to compare the values for example >, <, ==, !=.
+
+3) Logical Operators
+These operators used to compare logics for example in if block check 'and(&&)' , 'or(||)' conditions.
+
+4) Bitwise Operators
+These operators are used to perform Bitwise operations. (&,|)
+
+5) Ternary Operators
+These operators are used to perform if else block in shortcut. (condition-check) ? perform if operation : perform else operation;
+
+6) instanceof
+These will check the instance belong to that class and returns value in True or False.
+Example: String s = "Deep";  //s.instanceOf(String);
