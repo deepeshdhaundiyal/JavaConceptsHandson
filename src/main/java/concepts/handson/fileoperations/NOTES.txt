@@ -1,0 +1,38 @@
+File IO is used to perform operations over the Files in Java. This operations covers following functionality :
+
+1) Creating a File
+//Filefile=newFile("example.txt");
+file.createNewFile()
+
+2) Writing to a File
+//FileWriterwriter=newFileWriter("example.txt");
+writer.write("Hello, this is a sample text.");
+
+3) Reading from a File (Scanner or BufferReader- for large files)
+//Filefile=newFile("example.txt");
+Scannerreader=newScanner(file);
+
+4) Appending to a File
+Use the FileWriter class with true as a second argument to append data to an existing file //FileWriterwriter=newFileWriter("example.txt", true);
+
+5) Deleting a File
+Filefile=newFile("example.txt");
+boolean flag = (file.delete()) ? //sout("file deleted)==null : //sout("file not exists")==null;
+
+Important points:-
+sout() returns void, so we cannot directly use it in the ternary operator.
+Instead, we use a trick by comparing the println() result to null.
+
+BufferedReader and BufferedWriter are more efficient for reading and writing large files.
+
+We need to catch IO exceptions to perform operations with file.
+
+We PREFER to user try out with resources to automatcally close the resources like FileWriter, BufferedReader, etc.
+
+Example:-
+// Using try-with-resources to automatically close the FileWritertry (FileWriterwriter=newFileWriter("example.txt")) {
+writer.write(content); sout("Successfully written to the file.");
+ }
+catch (IOException e) {
+System.out.println("An error occurred while writing to the file."); e.printStackTrace();
+}
