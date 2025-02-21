@@ -2,7 +2,7 @@ package concepts.handson.dsa.strivers;
 
 import java.util.*;
 
-public class duplicatesArrayList
+public class DuplicatesArrayList
 {
 
     public static void main(String[] args) {
