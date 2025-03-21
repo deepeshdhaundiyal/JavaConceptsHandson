@@ -18,3 +18,6 @@ This repository includes my handson and notes for the Java Concepts.
 
 05-01-2024 (Sunday)
 6) Operators Hands-on       ---> (path : src/main/java/concepts.handson.basicconcepts.operators)
+
+04-02-2024 (Tuesday)        ---> Added some DSA logics path src/main/java/concepts/handson/dsa
+I have hands on Rest APIs concepts and adding it into seperate repository. 
