@@ -1,4 +1,4 @@
-package concepts.handson.Multithreading.InterThreadCommunication;
+package concepts.handson.dsa.strivers;
 
 import java.util.Arrays;
 
